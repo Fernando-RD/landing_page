@@ -32,7 +32,7 @@ nav .navbar {
     padding: 50;
     margin: 0 10px;
     flex-wrap: wrap; /*Esta etiqueta permite que los elementos hijo puedan colocarse en varias lineas. Asi evitamos que se superpongan*/
-
+    z-index: 999;
 }
 
 nav .navbar li a {
