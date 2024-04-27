@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+}
+
+body {
+    background-image: url("../img/wallpaper.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 50px;
+    margin-right: 15%;
+}
+
+nav .navbar {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    padding: 50;
+    margin: 0 10px;
+    flex-wrap: wrap; /*Esta etiqueta permite que los elementos hijo puedan colocarse en varias lineas. Asi evitamos que se superpongan*/
+
+}
+
+nav .navbar li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    margin: 50px 50px 0px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+nav .navbar li a:hover {
+    border-bottom: 1px solid #0a71b3;
+    color: #0a71b3;
+    transition: 1s;
+
+}
+
+nav .navbar li .desplegable {
+    display: none;
+    position: absolute;
+    list-style: none;
+    width: max-content;
+    background-color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+nav .navbar li:hover .desplegable {
+    display: block;
+    text-align: center;
+}
+
+nav .navbar li .desplegable li {
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px;
+    background-color: #c5daea;
+    text-align: center;
+}
+
+nav .navbar li .desplegable li:hover {
+    background-color: #dfecf4;
+    text-decoration: none;
+    transition: 1s;
+}
+
+nav .logo {
+    width: 350px;
+    height: auto;
+    margin-right: 20%;
+}
+
+/*Estilos del index*/
+.contenido {
+    position: relative;
+    float: right;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contenido .titulos {
+    position: relative;
+    max-width: 800px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.contenido .titulos h1 {
+    font-family: "Great Vibes";
+    font-size: 5em;
+    color: black;
+}
+
+.contenido .titulos h2 {
+    font-size: 4em;
+    font-weight: 600;
+    color: #003a64;
+    text-transform: uppercase;
+    line-height: 0.5em;
+}
+
+.contenido .titulos hr {
+    max-width: 600px;
+    margin: auto;
+    margin-top: 3em;
+}
+
+.contenido .titulos h3 {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.contenido .titulos a {
+    text-decoration: none;
+    padding: 15px;
+    font-size: 0.7em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #003a64;
+    border:#003a64 2px solid;
+    border-radius: 30px;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.contenido .titulos a:hover {
+    background-color: white;
+    border: white 2px solid;
+    box-shadow: 0 4px 16px #003a64;
+    transition: 1s;
+    /*La etiqueta box-shadow hace un efecto "sombra", con la forma y tamaño del box del objeto. Los valores que definimos son:
+    desplazamiento-horizontal, desplazamiento-vertical, longitud del degradado y el color*/
+}
+
+/*Estilos de Quien soy*/
+.presentacion {
+    text-align: center;
+    justify-content: center;
+    margin-left: -5vh;
+}
+
+.presentacion h1 {
+    font-family: "Great Vibes";
+    font-size: 4em;
+    font-weight: 300;
+}
+
+.presentacion p {
+    font-size: 1.5em;
+    font-weight: 400;
+}
+
+img {
+    display: block;
+    margin:auto;
+    width: 250px;
+    height: 200px;
+}
+
+.contenido .presentacion div {
+    position: absolute;
+    margin-top: 5vh;
+}
+
+.contenido .presentacion .habilidad-1 {
+    transform: rotate(15deg);
+    top: 5vh;
+}
+
+.contenido .presentacion .habilidad-2 {
+    left:20vh;
+    top:2vh;
+    transform: rotate(5deg);
+}
+
+.contenido .presentacion .habilidad-3 {
+    left:40vh;
+    top:6vh;
+    transform: rotate(-10deg);
+}
+.contenido .presentacion .habilidad-4 {
+    left:60vh;
+    top:3vh;
+    transform: rotate(20deg);
+}
+
+.contenido .presentacion div:hover{
+    z-index:1;
+    transform: rotate(-2deg);
+}
+
+/*Estilos de Proyectos*/
+#proyectos {
+    text-align: center;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: -5vh;
+    margin-bottom: 10vh;
+    margin-right: 10vh;
+}
+
+#proyectos .imagen-proyecto {
+    margin: auto;
+    justify-content: space-between;
+    display: grid; /*Coloca las imágenes en una cuadrícula. Se utiliza mucho para hacer Galerías*/
+}
+
+#proyectos img {
+    width: 20vh;
+    height: 20vh;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+#proyectos h4 {
+    font-size: 0.8em;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
+
+#proyectos p {
+    font-size: 0.8em;
+    font-style: italic;
+    font-weight: 300;
+    margin-bottom: 2vh;
+}
+
+/*Estilos del CV*/
+.contenido .cv {
+    width: 100%;
+    background-color: white;
+    margin: -5vh 2vh 5vh -5vh;
+}
+
+.contenido .cv h3 {
+    background-color: #003a64;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: center;
+    justify-content: center;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+}
+
+.contenido .cv .titulo {
+    font-size: 1.3em;
+    font-weight: 600;
+    padding: 1vh 4vh 2vh;
+}
+
+.contenido .cv .lugar {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.contenido .cv .fecha {
+    color: grey;
+    font-size: 1em;
+    font-weight: 300;
+}
+
+.contenido .cv .lista-herramientas {
+    display: inline-flex;
+    justify-content: center;
+    padding: 1vh 4vh 2vh;
+    list-style: square;
+}
+
+/*Estilos del formulario*/
+.contenido .formulario {
+    margin-top: -5vh;
+    text-align: center;
+    width: 100%;
+    margin-left: -10vh;
+}
+
+.contenido .formulario input, select, textarea {
+    margin: auto;
+    margin-bottom: 2vh;
+}
+
+.contenido .formulario .pers-contacto {
+    width: 25%;
+}
+
+.contenido .formulario textarea {
+    width: 75%;
+}
+
+fieldset {
+    border: 2px solid #003a64;
+}
+
+legend {
+    margin: 10px;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+.contenido .formulario .boton {
+    background-color: #003a64;
+    color: white;
+    font-size: 1em;
+    font-weight: 500;
+    padding: 1vh;
+    margin: 1vh;
+}
+
+.contenido .formulario .boton:hover {
+    background-color: #c5daea;
+    color: #003a64;
+    transition: 1s;
+}
+
+/*Estilos del footer*/
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #c5daea;
+}
+
+footer p {
+    font-size: 1em;
+    font-weight: 800;
+    text-align: left;
+    margin-left: 50px;
+}
+
+footer p .infotxt {
+    font-weight: 400;
+}
+
+footer .rrss {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+ion-icon {
+    font-size: 30px;
+    color: #003a64;
+    margin-right: 30px;
+}
+
+ion-icon:hover {
+    color: white;
+    filter: drop-shadow( 0 4px 4px #003a64);
+    transition: 1s;
+    /*Filter: drop-shadow es similar a box-shadow, pero en este caso, y segun la documentación de ionic.io, es necesario hacerlo con esta etiqueta.
+    Filter nos sirve para agregar diferentes efectos a objetos vectoriales, que no tienen una forma geométrica predefinida. Los valores que definimos son:
+    desplazamiento-horizontal, desplazamiento-vertical, longitud del degradado y el color*/
+}
+
+
+/* Estilos para dispositivos con ancho menor o igual a 576px*/
+@media screen and (max-width: 576px) {
+    /* Estilos para la navegación */
+    
+    nav .navbar {
+        display: inline-block;
+    }
+
+    nav .navbar li a {
+        font-size: 0.8em;
+    }
+
+    nav .logo {
+        display: none;
+    }
+
+    .contenido {
+        width: 80%;
+        float: none;
+        text-align: center;
+        margin: auto;
+    }
+
+    .contenido .titulos h1 {
+        font-size: 2em;
+        color: black;
+    }
+    
+    .contenido .titulos h2 {
+        font-size: 2em;
+    }
+    
+    .contenido .titulos h3 {
+        margin-top: 1em;
+        margin-bottom: 1em;
+    }
+
+    /* Estilos para la presentación */
+    .presentacion h1 {
+        font-size: 2em;
+    }
+
+    .presentacion p {
+        font-size: 1em;
+    }
+
+    .presentacion .habilidad ion-icon {
+        font-size: 2em;
+    }
+
+    .presentacion .habilidad p {
+        font-size: 1em;
+    }
+}
+
+/* Estilos para dispositivos con ancho mayor o igual a 992px*/
+@media (max-width: 992px) {
+    /* Estilos para la navegación */
+        
+    nav .navbar {
+        display: inline-block;
+        align-items: center;
+    }
+ 
+    nav .logo {
+        width: 200px;
+        height: auto;
+        margin-right: 10%;
+    }
+    
+    /*Estilos del index*/
+    .contenido {
+        margin: auto;
+        width: 80%;
+    }
+        
+    .contenido .titulos h1 {
+        font-size: 3em;
+    }
+    
+    .contenido .titulos h2 {
+        font-size: 2.5em;
+    }
+    
+    .contenido .titulos h3 {
+        margin-top: 1.5em;
+        margin-bottom: 1.5em;
+    }
+
+    /* Estilos para la presentación */
+    .presentacion h1 {
+        font-size: 3em;
+    }
+
+    .presentacion p {
+        font-size: 1.5em;
+    }
+
+    .presentacion .habilidad ion-icon {
+        font-size: 3em;
+    }
+
+    .presentacion .habilidad p {
+        font-size: 1em;
+    }
+}
